@@ -420,10 +420,16 @@ footer {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.hero-content, 
-.about-container, 
-.qualification-container, 
-.projects-container, 
-.contact-container {
-    animation: fadeIn 1s ease-out;
+details {
+
+    background-color: #CCD595;
+    border-radius: 5px;
+    padding: 1rem;
 }
+summary {
+
+    color: #331F19;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
