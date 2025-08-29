@@ -1,0 +1,163 @@
+<html>
+    <body>
+       
+          <!DOCTYPE html>
+<html lang="pt-BR">
+
+
+<head>
+
+<meta charset="UFT-8">
+<title> Estrutura SE javaScript</title>
+<link rel="stylesheet" type="text/css" href="css/config.css">
+<script src="js/valproc.js"></script>
+
+<style>
+
+/*Configuraçãoes gerais*/
+
+
+section{
+
+margin-top: 0px auto;  
+
+}
+
+/*Comfiguração da página*/
+
+.cadmediaaluno1{
+
+width: 300px;
+margin: 0px auto;
+font-weight: bold;
+margin-bottom: 10px;
+
+
+}
+
+.cadmediaaluno1 input{
+
+ margin: 5px auto;
+ width: 100%;
+ padding: 5px 0;
+
+
+}
+
+.cadmediaaluno1 button{
+
+ width: 30%;
+ margin:  0 10%;
+ background-color: rgb(114, 161, 202);
+ font-weight: bold;
+ font-size: 16px;
+
+}
+
+label{
+
+float: left;
+}
+
+h2{
+
+text-align: center;
+margin-top: 0px;
+margin-bottom: 10px;
+font-size: 50px;
+
+
+}
+
+</style>
+
+
+</head>
+
+<body>
+
+<section>
+
+     <h2>Atividade calculo media de aluno - estrutura condicional "se"(iF)</h2>
+     <font face="arial">
+
+         <form name="fmrnotas" action="#" method="get" 
+          onsubmit="return procFormulario()">
+
+         
+
+         <fieldset class="cadmediaaluno1">
+
+             <legend>Entrada de dados</legend>
+             <br>
+             <label for="num1">nota 1</label>
+             <input type="text" name="txtnum1" id="num1">
+             <br><br>
+             <label for="num2">Nota 2</label>
+             <input type="text" name="txtnum2" id="num2">
+             <br><br>
+             <label for="num3">Nota 3</label>
+            
+             <input type="text" name="txtnum3" id="num3">
+             <br>
+                   
+             <button type="reset">Limpar</button><button type="submit">Enviar</button>
+                   
+         </fieldset>
+     </form>
+
+
+</section>
+
+<script type="text/javascript">
+           
+             
+             function procFormulario(){
+
+//validação de campo
+if(document.fmrnotas.txtnum1.value==""){
+
+ alert("Preencha o campo Nota 1");
+ document.frmnotas.txtnum1.focus();
+ return false;
+
+
+
+}else if(document.fmrnotas.txtnum2.value==""){
+
+ alert("Preencha o campo Nota 2");
+ document.fmrnotas.txtnum2.focus();
+ return false;
+
+}else if(document.fmrnotas.txtnum3.value==""){
+
+alert("Preencha o campo Nota 3");
+document.fmrnotas.txtnum3.focus();
+return false;   
+
+}else{
+
+   //Processamento do programa...
+   //let é uma variavél para cálculo javascript
+   let nota1 = parseFloat(document.getElementById('num1').value);
+   let nota2 = parseFloat(document.getElementById('num2').value);
+   let nota3 = parseFloat(document.getElementById('num3').value);
+   let media=(nota1+nota2+nota3)/3;
+   if(media>=7){
+
+         alert("Sua media foi " + media.toFixed(2) + " Você foi aprovado");
+
+   }else if(media < 7.0){
+
+            alert("Sua media foi"+ media.toFixed(2)+ "Você está em recuperação"); 
+   
+ }else {
+
+     alertt("sua media foi de "+ media.toFixed(2)+" você foi aprovado");
+ }
+     }
+}
+ </script>
+</body>
+ </body>
+</html>
